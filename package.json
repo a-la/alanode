@@ -1,6 +1,6 @@
 {
   "name": "alanode",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "The Binary To Run Node.JS Files With Import And Export Statements.",
   "scripts": {
     "t": "zoroaster -a",
