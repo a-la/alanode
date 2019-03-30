@@ -1,6 +1,6 @@
 {
   "name": "alanode",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The Binary To Run Node.JS Files With Import And Export Statements.",
   "main": "build/index.js",
   "module": "src/index.js",
@@ -29,8 +29,16 @@
     "url": "git://github.com/a-la/alanode.git"
   },
   "keywords": [
-    "alamode", "alanode", "import", "export", "require",
-    "ecma", "ecma6", "es6", "modules", "module"
+    "alamode",
+    "alanode",
+    "import",
+    "export",
+    "require",
+    "ecma",
+    "ecma6",
+    "es6",
+    "modules",
+    "module"
   ],
   "author": "Anton <anton@adc.sh>",
   "license": "MIT",
