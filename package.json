@@ -1,6 +1,6 @@
 {
   "name": "alanode",
-  "version": "0.0.0-pre",
+  "version": "1.0.0",
   "description": "The Binary To Run Node.JS Files With Import And Export Statements.",
   "main": "build/index.js",
   "module": "src/index.js",
