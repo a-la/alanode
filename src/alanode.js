@@ -1,6 +1,10 @@
 #!/usr/bin/env node
 import { resolve } from 'path'
 import { lstatSync } from 'fs'
+
+import alamode from 'alamode'
+alamode()
+
 const p = resolve(process.argv[2])
 const [node,,...rest] = process.argv
 const files = rest.map((f) => {

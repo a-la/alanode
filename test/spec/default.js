@@ -1,6 +1,6 @@
 import { equal, ok } from 'zoroaster/assert'
 import Context from '../context'
-import alanode from '../../src'
+// import alanode from '../../src'
 
 /** @type {Object.<string, (c: Context)>} */
 const T = {

@@ -1,6 +1,10 @@
 #!/usr/bin/env node
 const { resolve } = require('path');
 const { lstatSync } = require('fs');
+
+let alamode = require('alamode'); if (alamode && alamode.__esModule) alamode = alamode.default;
+alamode()
+
 const p = resolve(process.argv[2])
 const [node,,...rest] = process.argv
 const files = rest.map((f) => {

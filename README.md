@@ -26,13 +26,20 @@ $ alanode source
 
 It uses [ÀLaMode](https://github.com/a-la/alamode) regex-based transpiler to change `import` and `export` statements into `require` calls and `module.export` expressions (no _Babel_). It also normalises `process.argv` to hide its presence, so that programs can safely keep using the _argv_ array without unexpected results.
 
+_With the following file that uses an import_:
+
 ```js
+import { constants } from 'os'
 console.log(process.argv)
+console.log(constants.signals.SIGINT)
 ```
+
+_`$ alanode t` will generate the result successfully:_
 
 ```
 [ '/Users/zavr/.nvm/versions/node/v8.15.0/bin/node',
-  '/Users/zavr/a-la/alanode/t' ]
+  '/Users/zavr/a-la/alanode/test/fixture/t' ]
+2
 ```
 
 <p align="center"><a href="#table-of-contents"><img src=".documentary/section-breaks/1.svg?sanitize=true"></a></p>
