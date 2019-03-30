@@ -11,50 +11,31 @@ yarn add -E alanode
 ## Table Of Contents
 
 - [Table Of Contents](#table-of-contents)
-- [API](#api)
-- [`alanode(arg1: string, arg2?: boolean)`](#mynewpackagearg1-stringarg2-boolean-void)
-  * [`Config`](#type-config)
+- [CLI](#cli)
 - [Copyright](#copyright)
 
 <p align="center"><a href="#table-of-contents"><img src=".documentary/section-breaks/0.svg?sanitize=true"></a></p>
 
-## API
+## CLI
 
-The package is available by importing its default function:
+The package can be run from the CLI:
+
+```sh
+$ alanode source
+```
+
+It uses [ÀLaMode](https://github.com/a-la/alamode) regex-based transpiler to change `import` and `export` statements into `require` calls and `module.export` expressions (no _Babel_). It also normalises `process.argv` to hide its presence, so that programs can safely keep using the _argv_ array without unexpected results.
 
 ```js
-import alanode from 'alanode'
+console.log(process.argv)
+```
+
+```
+[ '/Users/zavr/.nvm/versions/node/v8.15.0/bin/node',
+  '/Users/zavr/a-la/alanode/t' ]
 ```
 
 <p align="center"><a href="#table-of-contents"><img src=".documentary/section-breaks/1.svg?sanitize=true"></a></p>
-
-## `alanode(`<br/>&nbsp;&nbsp;`arg1: string,`<br/>&nbsp;&nbsp;`arg2?: boolean,`<br/>`): void`
-
-Call this function to get the result you want.
-
-__<a name="type-config">`Config`</a>__: Options for the program.
-
-|   Name    |   Type    |    Description    | Default |
-| --------- | --------- | ----------------- | ------- |
-| shouldRun | _boolean_ | A boolean option. | `true`  |
-| __text*__ | _string_  | A text to return. | -       |
-
-```js
-/* yarn example/ */
-import alanode from 'alanode'
-
-(async () => {
-  const res = await alanode({
-    text: 'example',
-  })
-  console.log(res)
-})()
-```
-```
-example
-```
-
-<p align="center"><a href="#table-of-contents"><img src=".documentary/section-breaks/2.svg?sanitize=true"></a></p>
 
 ## Copyright
 
