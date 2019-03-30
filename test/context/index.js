@@ -3,7 +3,7 @@ import { debuglog } from 'util'
 
 const LOG = debuglog('alanode')
 
-const FIXTURE = resolve(__dirname, '../fixture')
+const FIXTURE = 'test/fixture'
 
 /**
  * A testing context for the package.
@@ -11,6 +11,9 @@ const FIXTURE = resolve(__dirname, '../fixture')
 export default class Context {
   async _init() {
     LOG('init context')
+  }
+  static get BIN() {
+    return process.env.ALAMODE_ENV == 'test-build' ? 'build/alanode' : 'src'
   }
   /**
    * Example method.
@@ -23,9 +26,6 @@ export default class Context {
    */
   get FIXTURE() {
     return resolve(FIXTURE, 'test.txt')
-  }
-  get SNAPSHOT_DIR() {
-    return resolve(__dirname, '../snapshot')
   }
   async _destroy() {
     LOG('destroy context')

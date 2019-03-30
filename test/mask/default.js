@@ -1,14 +1,15 @@
 import makeTestSuite from '@zoroaster/mask'
 import Context from '../context'
-import alanode from '../../src'
 
-// export default
+export default
 makeTestSuite('test/result', {
-  async getResults(input) {
-    const res = await alanode({
-      text: input,
-    })
-    return res
+  fork: {
+    module: Context.BIN,
+    preprocess: {
+      stdout(stdout) {
+        return stdout.replace(`node/${process.version}/bin/node`,
+          `node/v8.15.0/bin/node`)
+      },
+    },
   },
-  context: Context,
 })
