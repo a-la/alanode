@@ -14,6 +14,6 @@ _With the following file that uses an import_:
 
 _`$ alanode t` will generate the result successfully:_
 
-%FORK src/alanode test/fixture/t%
+%!FORK src/alanode test/fixture/t%
 
 %~%
