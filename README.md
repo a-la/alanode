@@ -5,7 +5,8 @@
 `alanode` is The Binary To Run Node.JS Files With Import And Export Statements.
 
 ```sh
-yarn add -E alanode
+yarn add -DE alanode # project-based
+yarn global add alanode # user-based
 ```
 
 ## Table Of Contents

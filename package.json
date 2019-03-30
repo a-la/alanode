@@ -20,16 +20,17 @@
     "e": "node example",
     "example/": "yarn e example/example.js"
   },
+  "bin": "build/alanode.js",
   "files": [
-    "build",
-    "src"
+    "build"
   ],
   "repository": {
     "type": "git",
     "url": "git://github.com/a-la/alanode.git"
   },
   "keywords": [
-    "alanode"
+    "alamode", "alanode", "import", "export", "require",
+    "ecma", "ecma6", "es6", "modules", "module"
   ],
   "author": "Anton <anton@adc.sh>",
   "license": "MIT",
