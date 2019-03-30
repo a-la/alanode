@@ -2,7 +2,7 @@
 
 ### [1.0.1](https://github.com/a-la/alanode/compare/v1.0.0...v1.0.1)
 
-- [package] Add `bin` field and keywords.
+- [package] Add the `bin` field and keywords.
 
 ### [1.0.0](https://github.com/a-la/alanode/compare/v0.0.0-pre...v1.0.0)
 
