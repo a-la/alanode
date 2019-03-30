@@ -13,7 +13,7 @@ export default class Context {
     LOG('init context')
   }
   static get BIN() {
-    return process.env.ALAMODE_ENV == 'test-build' ? 'build/alanode' : 'src'
+    return 'src/alanode'
   }
   /**
    * Example method.
